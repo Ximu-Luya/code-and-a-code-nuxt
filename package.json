@@ -1,0 +1,24 @@
+{
+  "name": "code-and-a-code-nuxt",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@iconify-json/icon-park-outline": "^1.1.15",
+    "@nuxt/eslint": "^0.3.8",
+    "@pinia/nuxt": "^0.5.1",
+    "@unocss/nuxt": "^0.59.4",
+    "@unocss/reset": "^0.59.4",
+    "@vueuse/nuxt": "^10.9.0",
+    "nuxt": "^3.11.2",
+    "unocss": "^0.59.4",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  }
+}
