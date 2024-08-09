@@ -3,7 +3,12 @@
 </script>
 
 <template>
-  <main class="h-full w-full h-w-center flex-col">
+  <main class="h-screen w-screen max-w[600px] m-a bg-white">
     <slot></slot>
   </main>
 </template>
+
+<style lang="scss">
+@import url("../assets/main.scss");
+@import url("animate.css");
+</style>
