@@ -3,10 +3,18 @@
     <!-- <el-button type="primary" @click="() => {console.log(abc)}" v-if="true">生成</el-button> -->
     
     <div class="action-bar">
-      <el-button :icon="Upload" @click="handleReport">上报</el-button>
-      <el-button type="danger" :icon="Delete" @click="handleClear">清空</el-button>
-      <el-button v-if="!isMute" type="warning" :icon="MuteNotification" @click="handleMute">静默捕获异常</el-button>
-      <el-button v-else type="success" :icon="Bell" @click="handleDisableMute">启用异常提示</el-button>
+      <el-button @click="handleReport">
+        <div class="i-icon-park-outline:upload mr-1"></div>上报
+      </el-button>
+      <el-button type="danger" @click="handleClear">
+        <div class="i-icon-park-outline:delete-five mr-1"></div>清空
+      </el-button>
+      <el-button v-if="!isMute" type="warning" @click="handleMute">
+        <div class="i-icon-park-outline:close-remind mr-1"></div>静默捕获异常
+      </el-button>
+      <el-button v-else type="success" @click="handleDisableMute">
+        <div class="i-icon-park-outline:remind mr-1"></div>启用异常提示
+      </el-button>
     </div>
 
     <template v-if="logs.length">
@@ -32,8 +40,6 @@
 
 
 <script setup lang="ts">
-import { Upload, Delete, MuteNotification, Bell } from '@element-plus/icons-vue'
-
 const visible = defineModel<boolean>('visible', { required: true })
 
 const emit = defineEmits(['update:visible'])

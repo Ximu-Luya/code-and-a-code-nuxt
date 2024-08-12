@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@element-plus/icons-vue':
-        specifier: ^2.3.1
-        version: 2.3.1(vue@3.4.37(typescript@5.5.4))
       '@element-plus/nuxt':
         specifier: ^1.0.9
         version: 1.0.9(@element-plus/icons-vue@2.3.1(vue@3.4.37(typescript@5.5.4)))(element-plus@2.8.0(vue@3.4.37(typescript@5.5.4)))(magicast@0.3.4)(rollup@4.20.0)
