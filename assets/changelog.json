@@ -1,0 +1,191 @@
+[
+  {
+    "version": "0.3.3-alpha",
+    "update": "2022-10-17",
+    "changes": [
+      {
+        "type": "Feature",
+        "content": [
+          {
+            "title": "新增",
+            "description": "新增了静默异常捕获功能，启用后捕获到异常时将不会弹出提示"
+          },
+          {
+            "title": "修改",
+            "description": "难度调整：卡牌在生成时绝大部分将会被打乱"
+          },
+          {
+            "title": "修改",
+            "description": "难度调整：卡牌在生成时更容易生成在牌堆中间的位置"
+          }
+        ]
+      },
+      {
+        "type": "Bug Fixes",
+        "content": [
+          {
+            "title": "修复",
+            "description": "修复了在iOS中，无法调用震动API而不断发生异常的问题。修改为：API能够被调用时，才调用震动"
+          },
+          {
+            "title": "修复",
+            "description": "修复了卡牌过快加入缓存区时，无法消除的问题"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "version": "0.3.2",
+    "update": "2022-10-12",
+    "changes": [
+      {
+        "type": "Feature",
+        "content": [
+          {
+            "title": "修改",
+            "description": "优化了卡牌生成规则，降低难度的同时使游戏前期更加轻松"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "version": "0.3.1",
+    "update": "2022-10-11",
+    "changes": [
+      {
+        "type": "Feature",
+        "content": [
+          {
+            "title": "修改",
+            "description": "优化了对话框在移动端的显示样式"
+          }
+        ]
+      },
+      {
+        "type": "Bug Fixes",
+        "content": [
+          {
+            "title": "修复",
+            "description": "修复了首页底部版本号显示错误的问题"
+          },
+          {
+            "title": "修复",
+            "description": "修复了游戏结束与胜利 alert弹窗两次的问题"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "version": "0.3.0",
+    "update": "2022-10-10",
+    "changes": [
+      {
+        "type": "Feature",
+        "content": [
+          {
+            "title": "新增",
+            "description": "卡牌生成规则修改为网格式布局使其显示更加美观"
+          },
+          {
+            "title": "新增",
+            "description": "初始化牌组时随机打乱牌组顺序保证其随机性"
+          },
+          {
+            "title": "新增",
+            "description": "卡牌新增覆盖碰撞检测，被覆盖的卡牌将无法被点击"
+          },
+          {
+            "title": "新增",
+            "description": "卡牌样式调整为正方形，并取消显示名称"
+          },
+          {
+            "title": "新增",
+            "description": "通过域名后路径可以访问alpha与beta版本"
+          },
+          {
+            "title": "新增",
+            "description": "优化卡牌的洗牌随机动画"
+          },
+          {
+            "title": "修改",
+            "description": "缓存区的最大容量增加到7"
+          },
+          {
+            "title": "新增",
+            "description": "全局错误捕获模块新增用户界面提示"
+          },
+          {
+            "title": "新增",
+            "description": "新增全局点击震动（iOS暂时无法生效）"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "version": "0.2.0",
+    "update": "2022-09-25",
+    "changes": [
+      {
+        "type": "Feature",
+        "content": [
+          {
+            "title": "新增",
+            "description": "新增了重洗牌堆与卡牌返回牌堆功能"
+          },
+          {
+            "title": "新增",
+            "description": "新增了项目首页导航"
+          },
+          {
+            "title": "新增",
+            "description": "新增了项目更新日志及弹窗动画"
+          },
+          {
+            "title": "新增",
+            "description": "新增了全局错误捕获与记录功能，用于错误上报与偶现错误排查"
+          },
+          {
+            "title": "新增",
+            "description": "新增了卡牌图片与名称配置功能(代码控制)"
+          },
+          {
+            "title": "新增",
+            "description": "现在可以配置(代码控制) 消除数(卡牌在缓存堆中达到多少张可以消除)"
+          },
+          {
+            "title": "修改",
+            "description": "卡牌的初始化过程由 指定组数，改变为 卡片Icon数量 * 消除数倍数"
+          }
+        ]
+      },
+      {
+        "type": "Bug Fixes",
+        "content": [
+          {
+            "title": "修复",
+            "description": "修复了卡牌加入缓存堆过快时，可能导致游戏结束的问题"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "version": "0.1.0",
+    "update": "2022-09-20",
+    "changes": [
+      {
+        "type": "Feature",
+        "content": [
+          {
+            "title": "新增",
+            "description": "实现了核心玩法"
+          }
+        ]
+      }
+    ]
+  }
+]

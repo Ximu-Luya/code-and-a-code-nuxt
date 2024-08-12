@@ -11,7 +11,12 @@ export default defineNuxtConfig({
     // 'shadcn-nuxt',
     // 'unplugin-info/nuxt',
     // 'unplugin-analytics/nuxt',
-    '@nuxt/eslint' // https://eslint.nuxt.com/packages/module
+    '@nuxt/eslint', // https://eslint.nuxt.com/packages/module
+    '@element-plus/nuxt'
+  ],
+  css: [
+    'element-plus/dist/index.css',
+    'element-plus/theme-chalk/display.css'
   ],
   nitro: {
     prerender: {
@@ -27,7 +32,7 @@ export default defineNuxtConfig({
   alias: {},
   app: {
     head: {
-      title: '西木Nuxt模板项目',
+      title: '码了个码',
       viewport: 'width=device-width,initial-scale=1,viewport-fit=cover',
       htmlAttrs: {
         lang: 'zh-CN'
