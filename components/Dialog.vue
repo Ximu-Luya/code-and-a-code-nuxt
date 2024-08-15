@@ -4,7 +4,7 @@
     @close="handleClose"
     @open="handleOpen"
     class="dialog animate__animated"
-    :class="{ 'animate__zoomOut': disappearing, 'animate__zoomIn': !disappearing}"
+    :class="{ animate__zoomOut: disappearing, animate__zoomIn: !disappearing }"
     :width="width || '70%'"
     center
     :title="title"
@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 const { title, width } = defineProps<{
-  title: string,
+  title: string
   width?: string
 }>()
 
