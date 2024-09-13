@@ -313,7 +313,7 @@ export const useGameStore = defineStore('game', () => {
     const target = deck.value.findIndex(item => item.id === currentCard.id)
     if (target < 0) return alert('该卡牌不存在')
 
-    deck.value.splice(target, 1)
+    deck.value = deck.value.filter(item => item.id !== currentCard.id)
     cache.value.push(currentCard)
     // 设置缓存状态为true，使其不可继续点击
     currentCard.isCached = true
