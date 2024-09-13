@@ -1,24 +1,24 @@
 <template>
-  <div class="home h-full w-full flex flex-col justify-center items-center">
-    <img class="w[60%] mb-24" src="/img/title.png">
+  <div class="home h-full w-full flex flex-col justify-center items-center pos-relative">
+    <img class="w[60%] mb-24" src="/img/title.png" />
 
     <NuxtLink to="/game" class="start-game home-button">开始游戏</NuxtLink>
     <div class="change-log home-button" @click="openChangeLog">更新日志</div>
     <div class="error-log home-button" @click="openErrorLog">错误日志</div>
 
-    <ChangeLog v-model:visible="changeLogVisible"></ChangeLog>
-    <ErrorLog v-model:visible="errorLogVisible"></ErrorLog>
+    <ChangeLog v-model:visible="changeLogVisible" />
+    <ErrorLog v-model:visible="errorLogVisible" />
 
     <div class="copyright">
-      Developed by <el-link href="https://github.com/Ximu-Luya" target="_blank">@Ximu-Luya</el-link> 
-      Ver {{version}}
+      Developed by <el-link href="https://github.com/Ximu-Luya" target="_blank">@Ximu-Luya</el-link>
+      Ver {{ version }}
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue"
-import changelogdata from "~/assets/changelog.json"
+import { ref } from 'vue'
+import changelogdata from '~/assets/changelog.json'
 
 const version = ref(changelogdata[0].version)
 const changeLogVisible = ref(false)
@@ -31,7 +31,6 @@ const openChangeLog = () => {
 const openErrorLog = () => {
   errorLogVisible.value = true
 }
-
 </script>
 
 <style lang="scss" scoped>

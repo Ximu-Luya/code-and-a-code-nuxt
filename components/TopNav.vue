@@ -15,12 +15,17 @@
 
 <script>
 export default {
-  props: ['title'],
+  props: {
+    title: {
+      type: String,
+      default: ''
+    }
+  },
   methods: {
     handleBack() {
-      this.$router.replace('/home')
-    },
-  },
+      this.$router.back()
+    }
+  }
 }
 </script>
 
@@ -37,6 +42,7 @@ export default {
   }
 }
 </style>
+
 <style>
 /* 去除导航栏面包屑的默认margin */
 .el-page-header__breadcrumb {
