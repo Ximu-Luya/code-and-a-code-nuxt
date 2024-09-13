@@ -23,7 +23,7 @@ type BoxPos = {
 }
 
 export type Card = {
-  id: number
+  id: string
   code: number
   pos: Pos
   isCovered: boolean
@@ -32,6 +32,7 @@ export type Card = {
 }
 
 export const useGameStore = defineStore('game', () => {
+  const gameSeed = ref<number>()
   const allCards = ref<Card[]>([])
   const deck = ref<Card[]>([])
   const cache = ref<Card[]>([])
@@ -86,6 +87,14 @@ export const useGameStore = defineStore('game', () => {
         resolve()
       }, time)
     })
+  }
+
+  /**
+   * 生成游戏种子
+   * @returns 时间戳种子
+   */
+  const seedGenerate = () => {
+    return Date.now()
   }
 
   /**
@@ -187,7 +196,7 @@ export const useGameStore = defineStore('game', () => {
       const perGroup = rareCodes.includes(cardCode) ? 2 * group.removeCount : 5 * group.removeCount
       for (let cardCount = 0; cardCount < perGroup; cardCount++) {
         allCardsData.push({
-          id: id++,
+          id: `${gameSeed.value}-${id++}`,
           code: cardCode,
           pos: {
             x: deckBoxCenter.x,
@@ -233,7 +242,7 @@ export const useGameStore = defineStore('game', () => {
       if (probabilityGenerate(percentage)) {
         return random(center[0], center[1])
       } else {
-        return random(max_grid)
+        return random(0, max_grid)
       }
     }
     // 随机水平与垂直网格偏移
@@ -356,6 +365,7 @@ export const useGameStore = defineStore('game', () => {
   }
 
   return {
+    gameSeed,
     allCards,
     deck,
     cache,
@@ -364,8 +374,10 @@ export const useGameStore = defineStore('game', () => {
     gameOptions,
     /**
      * 初始化游戏
+     * @param seed 游戏种子
      */
-    async initGame() {
+    async initGame(seed: number = seedGenerate()) {
+      gameSeed.value = seed
       lockGame(true)
       initCardData()
       // 随机生成卡牌位置
